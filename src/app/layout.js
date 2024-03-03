@@ -1,7 +1,19 @@
-import { Inter } from "next/font/google";
+import { cx } from "@/src/utils/index";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "../components/navbar/Navbar";
+import { Footer } from "../components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-in",
+});
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mr",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +22,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+      <body
+        className={cx(inter.variable, manrope.variable, "font-in bg-light ")}
+      >
+        <div className="min-h-screen">
+          <div className="xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm mx-auto lg:px-20 px-10 bg-violet-900">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
