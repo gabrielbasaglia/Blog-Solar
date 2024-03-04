@@ -1,17 +1,40 @@
 "use client";
-import { ThemeContext } from "@/src/context/ThemeContext";
-import Image from "next/image";
-import { useContext } from "react";
 
-export const ThemeToggle = () => {
-  const { theme } = useContext(ThemeContext);
+import * as React from "react";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
 
-  console.log(theme);
+import { Button } from "@/src/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/src/components/ui/dropdown-menu";
+
+export function ThemeToggle() {
+  const { setTheme } = useTheme();
+
   return (
-    <div className="relative w-10 h-5 border rounded-full flex bg-black items-center justify-between">
-      <Image src="/moon.png" alt="moon" width={14} height={14} />
-      <div className="absolute w-4 h-4 rounded-full bg-white "></div>
-      <Image src="/sun.png" alt="sun" width={14} height={14} />
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
-};
+}

@@ -1,13 +1,8 @@
 "use client";
 
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-export const ThemeProvider = () => {
-  const { theme } = useContext(ThemeContext);
-  return (
-    <div>
-      <h1>ThemeProvider</h1>
-    </div>
-  );
-};
+export function ThemeProvider({ children, ...props }) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}

@@ -3,7 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/navbar/Navbar";
 import { Footer } from "../components/footer/Footer";
-import { ThemeProvider } from "../context/ThemeContext";
+import { ThemeProvider } from "../provider/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,10 +25,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body
-        className={cx(inter.variable, manrope.variable, "font-in bg-light ")}
+        className={cx(inter.variable, manrope.variable, "font-in bg-light")}
       >
-        <ThemeProvider>
-          <div className="min-h-screen">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen bg-light dark:bg-dark">
             <div className="xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm mx-auto lg:px-20 px-10">
               <Navbar />
               {children}

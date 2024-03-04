@@ -5,19 +5,23 @@ import { ThemeToggle } from "../themeToggle/ThemeToggle";
 
 export const Navbar = () => {
   return (
-    <div className="flex items-center justify-between h-24 ">
-      <div className="flex gap-2 flex-1">
+    <div className="flex items-center justify-between h-24">
+      <div className="hidden md:flex md:gap-2 md:flex-1 ">
         <Image src="/facebook.png" alt="facebook" width={24} height={24} />
         <Image src="/instagram.png" alt="instagram" width={24} height={24} />
         <Image src="/tiktok.png" alt="tiktok" width={24} height={24} />
         <Image src="/youtube.png" alt="youtube" width={24} height={24} />
       </div>
-      <div className="flex-1 text-center text-3xl font-bold ">Solar Eficaz</div>
-      <div className="flex gap-5 flex-1 ">
+      <div className="md:flex-1 md:text-center text-3xl font-bold font-in ">
+        Solar Eficaz
+      </div>
+      <div className="flex md:gap-5 md:flex-1 items-center ">
         <ThemeToggle />
-        <Link href="/">Início</Link>
-        <Link href="/">Contato</Link>
-        <Link href="/">Sobre</Link>
+        <div className=" md:gap-5 md:flex hidden">
+          <Link href="/">Início</Link>
+          <Link href="/">Contato</Link>
+          <Link href="/">Sobre</Link>
+        </div>
         <AuthLinks />
       </div>
     </div>
