@@ -1,0 +1,6 @@
+{
+  "workbench.settings.enableNaturalLanguageSearch": true,
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}

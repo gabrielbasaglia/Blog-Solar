@@ -5,7 +5,7 @@ import { ThemeToggle } from "../themeToggle/ThemeToggle";
 
 export const Navbar = () => {
   return (
-    <div className="flex items-center justify-between h-24">
+    <div className="flex items-center justify-between h-20">
       <div className="hidden md:flex md:gap-2 md:flex-1 ">
         <Image src="/facebook.png" alt="facebook" width={24} height={24} />
         <Image src="/instagram.png" alt="instagram" width={24} height={24} />

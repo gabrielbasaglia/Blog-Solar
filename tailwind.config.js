@@ -51,6 +51,8 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        softTextColor: "#666666",
+        textblack: "#020817",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,6 +76,10 @@ module.exports = {
       fontFamily: {
         mr: ["var(--font-mr)"],
         in: ["var(--font-in)"],
+      },
+      screens: {
+        xxs: "395px",
+        xs: "437px",
       },
     },
   },
