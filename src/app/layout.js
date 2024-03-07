@@ -1,5 +1,5 @@
 import { cx } from "@/src/utils/index";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/navbar/Navbar";
 import { Footer } from "../components/footer/Footer";
@@ -15,6 +15,11 @@ const manrope = Manrope({
   display: "swap",
   variable: "--font-mr",
 });
+const monserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mt",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -25,7 +30,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body
-        className={cx(inter.variable, manrope.variable, "font-in bg-light")}
+        className={cx(
+          inter.variable,
+          manrope.variable,
+          monserrat.variable,
+          "font-in bg-light"
+        )}
       >
         <ThemeProvider
           attribute="class"

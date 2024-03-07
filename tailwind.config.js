@@ -76,6 +76,7 @@ module.exports = {
       fontFamily: {
         mr: ["var(--font-mr)"],
         in: ["var(--font-in)"],
+        mt: ["var(--font-mt)"],
       },
       screens: {
         xxs: "395px",

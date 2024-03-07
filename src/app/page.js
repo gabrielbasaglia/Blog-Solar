@@ -10,7 +10,7 @@ export default function Home() {
         <Featured />
         <CategoryList />
       </div>
-      <div className="">
+      <div className="flex gap-12 ">
         <CardList />
         <Menu />
       </div>

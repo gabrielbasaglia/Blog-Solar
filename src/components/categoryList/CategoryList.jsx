@@ -4,10 +4,10 @@ import Link from "next/link";
 export const CategoryList = () => {
   return (
     <div className="mt-14 w-full">
-      <h1 className="font-bold text-2xl mb-6">Categorias Populares</h1>
+      <h1 className="font-bold text-2xl">Mais Populares</h1>
 
-      <div className="flex flex-wrap gap-5 w-full">
-        <div className="flex justify-between gap-5 bg-cyan-200 w-40 h-14 flex-grow rounded-md">
+      <div className="flex flex-wrap gap-5 mt-6 w-full">
+        <div className="flex justify-between gap-5 bg-cyan-200 w-40 h-14 flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"
@@ -25,7 +25,7 @@ export const CategoryList = () => {
           </div>
         </div>
 
-        <div className="flex justify-between gap-5 bg-purple-200 w-40 h-14 flex-grow rounded-md">
+        <div className="flex justify-between gap-5 bg-purple-200 w-40 h-14 flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"
@@ -42,7 +42,7 @@ export const CategoryList = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between gap-5 bg-amber-100 w-40 h-14 flex-grow rounded-md">
+        <div className="flex justify-between gap-5 bg-amber-100 w-40 h-14 flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"
@@ -59,7 +59,7 @@ export const CategoryList = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between gap-5 bg-red-100 w-40 h-14 flex-grow rounded-md">
+        <div className="flex justify-between gap-5 bg-red-100 w-40 h-14 flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"
@@ -76,7 +76,7 @@ export const CategoryList = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between gap-5 bg-orange-200 w-40 h-14 flex-grow rounded-md">
+        <div className="flex justify-between gap-5 bg-orange-200 w-40 h-14 flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"
@@ -93,7 +93,7 @@ export const CategoryList = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between gap-5 bg-green-200 w-40 h-14  flex-grow rounded-md">
+        <div className="flex justify-between gap-5 bg-green-200 w-40 h-14  flex-grow rounded-md hover:scale-110 duration-300 ease-in-out">
           <div className="w-1/2 xs:w-full flex items-center justify-start xs:justify-center mx-auto">
             <Link
               href="blog?cat=style"

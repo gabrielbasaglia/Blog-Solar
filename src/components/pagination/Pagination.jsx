@@ -1,6 +1,6 @@
 export const Pagination = () => {
   return (
-    <div>
+    <div className="">
       <h1>Pagination</h1>
     </div>
   );
