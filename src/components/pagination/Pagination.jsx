@@ -1,7 +1,10 @@
+import { Button } from "../ui/button";
+
 export const Pagination = () => {
   return (
-    <div className="">
-      <h1>Pagination</h1>
+    <div className="flex justify-between">
+      <Button variant="destructive">Anterior</Button>
+      <Button variant="destructive">Próximo</Button>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const CategoryList = () => {
   return (
-    <div className="mt-14 w-full">
+    <div className="mt-10 w-full">
       <h1 className="font-bold text-2xl">Mais Populares</h1>
 
       <div className="flex flex-wrap gap-5 mt-6 w-full">
